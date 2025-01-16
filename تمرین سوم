@@ -1,0 +1,15 @@
+// ضرب دو عدد 
+
+//دریافت عدد اول از کاربر
+Console.Write("Enter first number:");
+int number1 = int.Parse(Console.ReadLine());
+
+//دریافت عدد دوم از کاربر 
+Console.Write("Enter second number:");
+int number2 = int.Parse(Console.ReadLine());
+
+//محاسبه حاصل ضرب 
+int zarb = number1 * number2;
+
+//چاپ حاصل ضرب
+Console.WriteLine($"The product is:{zarb}");
