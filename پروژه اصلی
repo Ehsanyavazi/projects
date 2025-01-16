@@ -1,0 +1,61 @@
+// نمایش پیغام برای وارد کردن عدد اول
+Console.Write("Enter number1:");
+// خواندن و تبدیل ورودی عدد اول
+var a = int.TryParse(Console.ReadLine(), out int number1);
+
+// نمایش پیغام برای وارد کردن عدد دوم
+Console.Write("Enter a number2:");
+// خواندن و تبدیل ورودی عدد دوم
+var b = int.TryParse(Console.ReadLine(), out int number2);
+
+// نمایش پیغام برای وارد کردن عدد سوم
+Console.Write("Enter a number3:");
+// خواندن و تبدیل ورودی عدد سوم
+var c = int.TryParse(Console.ReadLine(), out int number3);
+
+// نمایش پیغام برای وارد کردن عدد چهارم
+Console.Write("Enter a number4:");
+// خواندن و تبدیل ورودی عدد چهارم
+var d = int.TryParse(Console.ReadLine(), out int number4);
+
+// نمایش پیغام برای وارد کردن عدد پنجم
+Console.Write("Enter a number5:");
+// خواندن و تبدیل ورودی عدد پنجم
+var e = int.TryParse(Console.ReadLine(), out int number5);
+
+// نمایش پیغام برای وارد کردن عدد ششم
+Console.Write("Enter a number6:");
+// خواندن و تبدیل ورودی عدد ششم
+var f = int.TryParse(Console.ReadLine(), out int number6);
+
+// نمایش پیغام برای وارد کردن عدد هفتم
+Console.Write("Enter a number7:");
+// خواندن و تبدیل ورودی عدد هفتم
+var g = int.TryParse(Console.ReadLine(), out int number7);
+
+// ایجاد آرایه‌ای از اعداد وارد شده
+int[] number = { number1, number2, number3, number4, number5, number6, number7 };
+
+// مقداردهی اولیه حداقل و حداکثر به اولین عدد وارد شده
+int min = number[0];
+int max = number[0];
+
+// جستجو در آرایه برای یافتن حداقل و حداکثر مقدار
+for (int i = 1; i < number.Length; i++)
+{
+    // بررسی عدد جاری و به‌روزرسانی مقدار حداقل در صورت لزوم
+    if (number[i] < min)
+    {
+        min = number[i];
+    }
+    // بررسی عدد جاری و به‌روزرسانی مقدار حداکثر در صورت لزوم
+    if (number[i] > max)
+    {
+        max = number[i];
+    }
+}
+
+// نمایش مقدار حداقل
+Console.WriteLine($"min: {min}");
+// نمایش مقدار حداکثر
+Console.WriteLine($"max: {max}");
